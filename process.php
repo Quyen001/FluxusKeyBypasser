@@ -1,5 +1,4 @@
 <?php
-// Kiểm tra xem form đã được submit chưa
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Lấy URL từ form input
     $url = filter_input(INPUT_POST, 'url', FILTER_SANITIZE_URL);
@@ -10,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bao gồm file simple_html_dom.php
-    require 'simple_html_dom.php';
+    require 'vendor/simple_html_dom.php';
 
     // Khởi tạo cURL session
     $ch = curl_init();
